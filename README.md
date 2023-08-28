@@ -67,7 +67,7 @@ You need to set the below parameter.
 - signed_url
 - expiration_time
 
-**Note:** If you do not pass the expiration time then automatically consider 5 minutes. 
+**Note:** The default expiration time is  5 minutes. 
 
 after 5 minutes, the URL will expire.
 
