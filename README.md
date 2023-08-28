@@ -25,7 +25,7 @@ return [
     | 
     |--------------------------------------------------------------------------
     |
-    | API KEY .
+    | API KEY.
     |
     */
 
@@ -44,7 +44,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | EXPIRASTION TIME
+    | EXPIRATION TIME
     |--------------------------------------------------------------------------
     |
     | EXPIRATION TIME
@@ -61,19 +61,22 @@ use Sevenspan\Bunny\Bunny;
 ```
 make a private URL using Bunny Net.
 
-You need to pass Below parameter is required.
+You need to set the below parameter.
 
 - api_key
 - signed_url
 - expiration_time
 
-Note : if you do not pass expiration time then automatically consider 5 minutes. 
+Note: If you do not pass the expiration time then automatically consider 5 minutes. 
 
-after 5 minutes, the URL will be is expired.
+after 5 minutes, the URL will expire.
 
 
-- below function using you can make a private url.
-  you need to pass media path.
+- below function using you can make a private URL.
+
+  generatePrivateImageUrl($path)
+  
+  You need to pass the media path.
 
 ## Example
 ```
