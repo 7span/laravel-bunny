@@ -69,7 +69,7 @@ use Sevenspan\Bunny\Bunny;
 The following parameters are required to generate a private URL:
 
 - api_key: Your Bunny Net API key.
-- signed_url: The URL you want to secure.
+- signed_url: Acquire the signed_url from your Bunnynet account under **CDN** > **General** > **HostNames** > **Linked Hostnames** section. Use the provided Hostname as your `signed_url`.
 - expiration_time: The time until the generated URL remains valid.
 
 > Note: The default expiration time for the generated URL is set to 5 minutes. After this period, the URL will expire automatically.
@@ -84,14 +84,14 @@ generatePrivateImageUrl($path)
 
 ## Example
 
-Here's an example of how to use the generatePrivateImageUrl function:
-
+Here's an example of how to use the `generatePrivateImageUrl function:
+`
 ```php
   $path = "capital_test.PNG";
   $url = Bunny::generatePrivateImageUrl($path);
 ```   
 
-In this example, the $path variable contains the path to the media file for which you want to create a private URL. The generated private URL is stored in the $url variable.
+In this example, the `$path` variable contains the path to the media file for which you want to create a private URL. The generated private URL is stored in the `$url` variable.
 
 Remember to replace "capital_test.PNG" with the actual path of the media file you want to generate a private URL for.
 
