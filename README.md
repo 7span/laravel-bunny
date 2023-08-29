@@ -1,25 +1,24 @@
 # laravel-bunny
 
-
-This package has been utilized to create the URL for the privately uploaded image on Bunnynet.
+This package has been employed to generate URLs for privately uploaded images on Bunnynet.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package using Composer:
 
-```
+```php
 composer require sevenspan/bunny
 ```
 
-You can publish the config file with:
+To publish the configuration file, run the following command:
 
-```
-php artisan vendor:publish --tag=config
-```
-This is the contents of the published config file:
-
+```php
+ php artisan vendor:publish --tag=config
 ```
 
+Once published, the configuration file will have the following content:
+
+```php
 return [
     /*
     |--------------------------------------------------------------------------
@@ -56,32 +55,43 @@ return [
 
 ];
 ```
+
+Make sure to customize the configuration values according to your requirements.
+
 ## Usage
-```
+
+To create a private URL using Bunny Net, you'll need to utilize the Bunny class. First, make sure to include it in your code:
+
+```php
 use Sevenspan\Bunny\Bunny;
 ```
-make a private URL using Bunny Net.
 
-You need to set the below parameter.
+The following parameters are required to generate a private URL:
 
-- api_key
-- signed_url
-- expiration_time
+- api_key: Your Bunny Net API key.
+- signed_url: The URL you want to secure.
+- expiration_time: The time until the generated URL remains valid.
 
-**Note:** Default expiration time is  5 minutes. 
+> Note: The default expiration time for the generated URL is set to 5 minutes. After this period, the URL will expire automatically.
 
-after 5 minutes, the URL will expire.
+### Function
 
+To generate a private URL, you can use the `generatePrivateImageUrl` function provided by the Bunny class. Here's the method signature:
 
-- below function using you can make a private URL.
-
-  generatePrivateImageUrl($path)
-  
-  You need to pass the media path.
+```php
+generatePrivateImageUrl($path)
+```
 
 ## Example
-```
-   $path = "capital_test.PNG";
-   $url = Bunny::generatePrivateImageUrl($path);
+
+Here's an example of how to use the generatePrivateImageUrl function:
+
+```php
+  $path = "capital_test.PNG";
+  $url = Bunny::generatePrivateImageUrl($path);
 ```   
+
+In this example, the $path variable contains the path to the media file for which you want to create a private URL. The generated private URL is stored in the $url variable.
+
+Remember to replace "capital_test.PNG" with the actual path of the media file you want to generate a private URL for.
 
