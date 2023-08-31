@@ -14,6 +14,17 @@
             "email": "champak@7span.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sevenspan\\Bunny\\BunnyServiceProvider"
+            ],
+            "aliases": {
+                "Bunny": "Sevenspan\\Bunny\\Facades\\Bunny"
+            }
+        }
+    },
+  
     "minimum-stability": "dev",
     "require": {}
 }
