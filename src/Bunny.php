@@ -19,7 +19,7 @@ class Bunny
     }
 
 
-    public static function generatePrivateImageUrl($mediaPath, $expires = null)
+    public static function getImageUrl($mediaPath, $expires = null)
     {
 
         $apikey = config('bunny.api_key');

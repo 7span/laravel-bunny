@@ -76,19 +76,19 @@ The following parameters are required to generate a private URL:
 
 ### Function
 
-To generate a private URL, you can use the `generatePrivateImageUrl` function provided by the Bunny class. Here's the method signature:
+To generate a private URL, you can use the `getImageUrl` function provided by the Bunny class. Here's the method signature:
 
 ```php
-generatePrivateImageUrl($path)
+getImageUrl($path)
 ```
 
 ## Example
 
-Here's an example of how to use the `generatePrivateImageUrl function:
+Here's an example of how to use the `getImageUrl function:
 `
 ```php
   $path = "capital_test.PNG";
-  $url = Bunny::generatePrivateImageUrl($path);
+  $url = Bunny::getImageUrl($path);
 ```   
 
 In this example, the `$path` variable contains the path to the media file for which you want to create a private URL. The generated private URL is stored in the `$url` variable.
