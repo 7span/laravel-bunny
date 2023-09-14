@@ -84,8 +84,7 @@ getImageUrl($path)
 
 ## Example
 
-Here's an example of how to use the `getImageUrl function:
-`
+Here's an example of how to use the `getImageUrl` function:
 ```php
   $path = "capital_test.PNG";
   $url = Bunny::getImageUrl($path);
